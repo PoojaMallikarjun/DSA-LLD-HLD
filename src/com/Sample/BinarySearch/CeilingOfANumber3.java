@@ -5,10 +5,10 @@ package com.Sample.BinarySearch;
 // ans = 9
 // if target = 7
 // ans = 7
-public class CeilingOfANumber {
+public class CeilingOfANumber3 {
     public static void main(String[] args) {
-        int[] arr = {2, 5, 7, 9};
-        int target = 6;
+        int[] arr = {2, 5, 10, 99};
+        int target = 66;
         System.out.println(findCeilingNumber(arr, target));
     }
 

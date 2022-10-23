@@ -3,7 +3,7 @@ package com.Sample.BinarySearch;
 // When the given array is sorted but the order of sorting(ASC or DESC) is not known
 // In that case to identify the order of sorting in the given sorted array can be identified by finding
 // arr[0] is greater of lesser than arr[n-1]
-public class OrderAgnosticBinarySearch {
+public class OrderAgnosticBinarySearch2 {
     public static void main(String[] args) {
         int[] arr = {100, 7, 6, 1};
         int target = 1;

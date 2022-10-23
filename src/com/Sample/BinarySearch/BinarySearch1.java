@@ -1,10 +1,10 @@
 package com.Sample.BinarySearch;
 
 //
-public class BinarySearch {
+public class BinarySearch1 {
     public static void main(String[] args) {
         int[] arr = {2, 5 , 12, 89};
-        int target = 112;
+        int target = 2;
         System.out.println(binarySearch(arr, target));
     }
 
