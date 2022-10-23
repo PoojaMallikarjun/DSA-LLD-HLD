@@ -1,7 +1,5 @@
 package com.Sample.LinearSearch;
 
-// Best case: O(1) --> When the element is in the start of the array
-// Worst case: O(N) --> When the element is in the end of the array
 public class LinearSearch {
     public static void main(String[] args) {
         int[] arr = {50, 3, 2, 5, 8, 1};

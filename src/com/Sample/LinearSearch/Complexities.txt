@@ -1,0 +1,7 @@
+Time Complexity:
+Best case: O(1) --> When the element is in the start of the array
+Worst case: O(N) --> When the element is in the end of the array
+
+Space Complexity:
+O(N) --> For an array of N elements
+No auxiliary space needed
