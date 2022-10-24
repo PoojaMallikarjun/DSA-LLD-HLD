@@ -8,13 +8,19 @@ package com.Sample.BinarySearch;
 public class CeilingOfANumber3 {
     public static void main(String[] args) {
         int[] arr = {2, 5, 10, 99};
-        int target = 66;
+        int target = 77;
         System.out.println(findCeilingNumber(arr, target));
     }
 
+    //    Return the smallest number >= target
+
     private static int findCeilingNumber(int[] arr, int target) {
+        if(target > arr[arr.length - 1])
+            return -1;
+
         int start = 0;
         int end = arr.length - 1;
+
         while(start <= end) {
             int mid = start + (end - start) / 2;
             if(target == arr[mid])
