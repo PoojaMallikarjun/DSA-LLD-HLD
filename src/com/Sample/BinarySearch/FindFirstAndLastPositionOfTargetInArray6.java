@@ -13,7 +13,7 @@ import java.util.Arrays;
 // Run Binary search twice->one to find start index, next to find the last index
 public class FindFirstAndLastPositionOfTargetInArray6 {
     public static void main(String[] args) {
-        int[] arr = {5,7,7,7,8,10};
+        int[] arr = {5,7,7,8,8,10};
         int target = 8;
         System.out.println(Arrays.toString(findFirstAndLastIndexOfTarget(arr, target)));
     }
@@ -21,7 +21,8 @@ public class FindFirstAndLastPositionOfTargetInArray6 {
     private static int[] findFirstAndLastIndexOfTarget(int[] arr, int target) {
         int ans[] = {-1, -1};
         ans[0] = binarySearch(arr, target, true);
-        ans[1] = binarySearch(arr, target, false);
+        if(ans[0] != -1)
+            ans[1] = binarySearch(arr, target, false);
         return ans;
     }
 
