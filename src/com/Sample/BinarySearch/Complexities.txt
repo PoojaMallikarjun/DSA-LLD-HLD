@@ -1,0 +1,26 @@
+Time Complexity:
+Best case: O(1) --> When the element is in the mid of the array
+Worst case: O(logN) --> When the element is in the end of the array
+
+Space Complexity:
+O(1)
+No auxiliary space needed
+
+Algorithm:
+
+arr -> sorted in asc order
+start = 0
+end = arr.length - 1
+
+1. while(start<=end)
+2. Find mid element
+    // mid = (start + end) / 2
+    mid = start + (end - start) / 2 --> because (start + end) might exceed int range
+3. if(target == arr[mid])
+            return arr[mid]
+       else if(target > arr[mid])
+            start = mid + 1
+       else
+            end = mid - 1
+
+4. return -1 // When target is not found in the array

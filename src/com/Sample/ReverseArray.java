@@ -1,6 +1,5 @@
 package com.Sample;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 
 public class ReverseArray {
