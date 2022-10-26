@@ -1,6 +1,7 @@
 package com.Sample.BinarySearch;
 
 // https://www.geeksforgeeks.org/find-rotation-count-rotated-sorted-array/
+// https://www.youtube.com/watch?v=W9QJ8HaRvJQ&list=PL9gnSGHSqcnr_DxHsP7AW9ftq0AtAyYqJ&index=16
 // The count would just be the position of pivot element+1.
 public class RotationCountInRotatedSortedArray12 {
     public static void main(String[] args) {
