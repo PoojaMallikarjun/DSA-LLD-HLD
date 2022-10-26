@@ -5,8 +5,13 @@ package com.Sample.BinarySearch;
 public class RotationCountInRotatedSortedArray12 {
     public static void main(String[] args) {
 //        int[] arr = {4, 5, 5, 6, 0, 1, 2, 3};
-        int[] arr = {4, 5, 6, 0, 1, 2, 3};
-        System.out.println(findRotationCount(arr));
+        int[] arr = {3, 4, 5, 6, 0, 1, 2};
+        System.out.println(countRotations(arr));
+    }
+
+    private static int countRotations(int[] arr) {
+        int pivot = findRotationCount(arr);
+        return pivot + 1;
     }
 
 //    use this for array with no duplicates
@@ -16,12 +21,10 @@ public class RotationCountInRotatedSortedArray12 {
         while(start <= end) {
             int mid = start + (end - start) / 2;
             if(mid < end && arr[mid] > arr[mid + 1]) {
-//                the count will be position + 1 as indices are 0 based
-                return mid + 1;
+                return mid;
             }
             if(mid > start && arr[mid] < arr[mid - 1]) {
-//                the count will be position + 1 as indices are 0 based(mid - 1 + 1)
-                return mid;
+                return mid - 1;
             }
             if(arr[mid] <= arr[start]) {
                 end = mid - 1;
@@ -29,8 +32,7 @@ public class RotationCountInRotatedSortedArray12 {
                 start = mid + 1;
             }
         }
-//        If the array is sorted but not rotated, the rotation count would be 0.
-        return 0;
+        return -1;
     }
 
     private static int findRotationCountWithDuplicates(int[] arr) {
@@ -39,25 +41,18 @@ public class RotationCountInRotatedSortedArray12 {
         while(start <= end) {
             int mid = start + (end - start) / 2;
             if(mid < end && arr[mid] > arr[mid + 1]) {
-//                the count will be position + 1 as indices are 0 based
-                return mid + 1;
-            }
-            if(mid > start && arr[mid] < arr[mid - 1]) {
-//                the count will be position + 1 as indices are 0 based(mid - 1 + 1)
                 return mid;
             }
-//            if(arr[mid] <= arr[start]) {
-//                end = mid - 1;
-//            } else {
-//                start = mid + 1;
-//            }
+            if(mid > start && arr[mid] < arr[mid - 1]) {
+                return mid - 1;
+            }
             if(arr[start] == arr[mid] && arr[mid] == arr[end]) {
                 if(arr[start] > arr[start + 1]) {
-                    return start + 1;
+                    return start;
                 }
                 start++;
                 if(arr[end] > arr[end - 1]) {
-                    return end + 1;
+                    return end;
                 }
                 end--;
             } else if(arr[start] < arr[mid] || (arr[start] == arr[mid] && arr[end] < arr[mid])) {
@@ -66,7 +61,6 @@ public class RotationCountInRotatedSortedArray12 {
                 end = mid - 1;
             }
         }
-//        If the array is sorted but not rotated, the rotation count would be 0.
-        return 0;
+        return -1;
     }
 }
