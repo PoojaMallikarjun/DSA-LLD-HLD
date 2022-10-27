@@ -1,5 +1,6 @@
 package com.Sample.BinarySearch.Assignments.Easy;
 
+// https://leetcode.com/problems/sqrtx/
 public class SquareRoot {
     public static void main(String[] args) {
         int x = 2147483647;
