@@ -2,6 +2,8 @@ package com.Sample.BinarySearch.Assignments.Hard;
 
 import java.util.Arrays;
 
+// https://www.youtube.com/watch?v=Ppy9lvyMnuc
+// https://curiouschild.github.io/leetcode/2019/06/21/divide-chocolate.html
 public class DivideChocolate {
     public static void main(String[] args) {
         int[] sweetness = new int[]{1, 2, 3, 4, 5};
